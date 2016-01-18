@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </mutableArray>
+        <mutableArray key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+            <string>OpenSans-Semibold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QRscanViewController">
+            <connections>
+                <outlet property="btn_start" destination="0dj-aC-kaN" id="LAM-IU-HSa"/>
+                <outlet property="label_status" destination="WIr-c1-vMG" id="gnP-bQ-ZW8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view_Preview" destination="MFn-Yb-Y8E" id="XuF-DD-7Ce"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MFn-Yb-Y8E">
+                    <rect key="frame" x="0.0" y="20" width="320" height="428"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wae-la-xVX">
+                    <rect key="frame" x="164" y="515" width="140" height="40"/>
+                    <color key="backgroundColor" red="0.57254901960000004" green="0.64705882349999999" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="KdE-qs-0Fm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                    <state key="normal" title="Submit">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QR Code Reader is not yet running..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIr-c1-vMG">
+                    <rect key="frame" x="16" y="487" width="288" height="20"/>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                    <color key="textColor" red="0.57254901960000004" green="0.64705882349999999" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcw-Wd-fq2">
+                    <rect key="frame" x="16" y="456" width="49" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="5ss-5b-lg2"/>
+                        <constraint firstAttribute="width" secondItem="Jcw-Wd-fq2" secondAttribute="height" multiplier="34:11" id="Pmt-8m-Z59"/>
+                    </constraints>
+                    <state key="normal" image="q2_back.png"/>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchUpInside" id="lQb-No-2Va"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dj-aC-kaN">
+                    <rect key="frame" x="16" y="515" width="140" height="40"/>
+                    <color key="backgroundColor" red="0.57254901960000004" green="0.64705882349999999" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="ikb-9g-BZW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                    <state key="normal" title="Start Scan">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="startStopReading:" destination="-1" eventType="touchUpInside" id="ZSR-k6-nxI"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="MFn-Yb-Y8E" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="5H3-W9-LKb"/>
+                <constraint firstAttribute="trailing" secondItem="Wae-la-xVX" secondAttribute="trailing" constant="16" id="5gE-Tr-fdZ"/>
+                <constraint firstItem="Jcw-Wd-fq2" firstAttribute="leading" secondItem="0dj-aC-kaN" secondAttribute="leading" id="7fc-0X-2sL"/>
+                <constraint firstItem="WIr-c1-vMG" firstAttribute="top" secondItem="Jcw-Wd-fq2" secondAttribute="bottom" constant="13" id="DIr-zZ-ccV"/>
+                <constraint firstItem="Wae-la-xVX" firstAttribute="width" secondItem="0dj-aC-kaN" secondAttribute="width" id="JgS-js-2vn"/>
+                <constraint firstItem="Wae-la-xVX" firstAttribute="bottom" secondItem="0dj-aC-kaN" secondAttribute="bottom" id="Ldr-AU-mpk"/>
+                <constraint firstItem="Jcw-Wd-fq2" firstAttribute="top" secondItem="MFn-Yb-Y8E" secondAttribute="bottom" constant="10" id="M0T-b6-djt"/>
+                <constraint firstAttribute="bottom" secondItem="0dj-aC-kaN" secondAttribute="bottom" constant="13" id="OGt-gU-lXu"/>
+                <constraint firstItem="WIr-c1-vMG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="V59-jB-1tT"/>
+                <constraint firstItem="0dj-aC-kaN" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" constant="-20" id="XdR-QY-7v9"/>
+                <constraint firstItem="MFn-Yb-Y8E" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="fTk-Wz-HiU"/>
+                <constraint firstItem="MFn-Yb-Y8E" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="g1h-MS-GNL"/>
+                <constraint firstItem="Wae-la-xVX" firstAttribute="height" secondItem="0dj-aC-kaN" secondAttribute="height" id="j0h-AX-F0a"/>
+                <constraint firstAttribute="trailing" secondItem="WIr-c1-vMG" secondAttribute="trailing" constant="16" id="nBR-im-X0e"/>
+                <constraint firstItem="0dj-aC-kaN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="nto-14-2N3"/>
+                <constraint firstItem="Wae-la-xVX" firstAttribute="top" secondItem="WIr-c1-vMG" secondAttribute="bottom" constant="8" id="pbe-jN-myw"/>
+            </constraints>
+            <point key="canvasLocation" x="442" y="349"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="q2_back.png" width="68" height="21"/>
+    </resources>
+</document>
